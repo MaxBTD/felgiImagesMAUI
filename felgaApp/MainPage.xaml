@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="felgaApp.MainPage">
+
+    <ScrollView BackgroundColor="AntiqueWhite">
+        <VerticalStackLayout
+            Spacing="20">
+            <Image Source="f0.jpg"
+                   x:Name="imgFelgi"/>
+            <Label x:Name="lblTitle"
+                   Text="Felga nr 1"
+                   FontSize="50"
+                   HorizontalTextAlignment="Center"
+                   TextColor="black"/>
+            <HorizontalStackLayout>
+                <Button Text="Poprzednia"
+                        Clicked="onPrevClicked"
+                        WidthRequest="150"
+                        BackgroundColor="SaddleBrown"
+                        HorizontalOptions="StartAndExpand"
+                        TextColor="White"/>
+                <Button Text="Następna"
+                        Clicked="onNextClicked"
+                        WidthRequest="150"
+                        BackgroundColor="SaddleBrown"
+                        HorizontalOptions="End"
+                        Margin="185, 0, 0, 0"
+                        TextColor="White"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Wybierz felgę: "
+                       TextColor="black"
+                       VerticalTextAlignment="Center"/>
+                <Entry x:Name="entJump"
+                       Placeholder="podaj numer felgi (1-10)"
+                       WidthRequest="200"
+                       HorizontalOptions="Center"
+                       PlaceholderColor="Black"
+                       Completed="onNrInput"/>
+            </HorizontalStackLayout>
+            <Button Text="Wylosuj dla mnie felgę"
+                    Clicked="onRandClicked"
+                    BackgroundColor="SaddleBrown"
+                    WidthRequest="300"
+                    TextColor="White"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
